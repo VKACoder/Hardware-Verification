@@ -1,0 +1,7 @@
+The 4-bit Adder/Subtractor is the basic building of an ALU. 
+It works as follows:
+-> The inputs to the block are: A, B and Cin
+-> The outputs are: sum and cout
+-> The block performs A+B (addition) when Cin = 0 and A-B (subtraction) when Cin = 1.
+-> During the addition operation, the augend and addend are passed as such and the block performs ripple carry addition (simplest N-bit adder architecture).
+-> However during subtraction operation, the addend is convert to its 2's complement using controlled inverter circuit (EXOR with one input as 1, which is Cin). This enables the same adder architecture to perform addition and 2's complement subtraction, thus saving hardware resources(area).
