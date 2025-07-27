@@ -5,3 +5,5 @@ It works as follows:
 -> The block performs A+B (addition) when Cin = 0 and A-B (subtraction) when Cin = 1.
 -> During the addition operation, the augend and addend are passed as such and the block performs ripple carry addition (simplest N-bit adder architecture).
 -> However during subtraction operation, the addend is convert to its 2's complement using controlled inverter circuit (EXOR with one input as 1, which is Cin). This enables the same adder architecture to perform addition and 2's complement subtraction, thus saving hardware resources(area).
+
+<img width="613" height="340" alt="dig51" src="https://github.com/user-attachments/assets/1a99910b-6a20-479e-acf0-bea3f09f72f9" />
