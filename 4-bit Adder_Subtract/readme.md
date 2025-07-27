@@ -12,7 +12,7 @@ It works as follows:
 
 -> However during subtraction operation, the addend is convert to its 2's complement using controlled inverter circuit (EXOR with one input as 1, which is Cin). This enables the same adder architecture to perform addition and 2's complement subtraction, thus saving hardware resources(area).
 
-<img width="1024" height="473" alt="fullAdder-1" src="https://github.com/user-attachments/assets/3ea16e1f-f179-4fd9-9669-3d80d4c70db7" />
+<img width="512" height="240" alt="fullAdder-1" src="https://github.com/user-attachments/assets/3ea16e1f-f179-4fd9-9669-3d80d4c70db7" />
 
 Fig 1: Full Adder
 
