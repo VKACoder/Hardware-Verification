@@ -19,3 +19,5 @@ Fig 1: Full Adder
 <img width="613" height="340" alt="dig51" src="https://github.com/user-attachments/assets/1a99910b-6a20-479e-acf0-bea3f09f72f9" />
 
 Fig 2: 4-bit Adder/Subtractor circuit using Full adders and EXOR.
+
+EDA Playground link: https://edaplayground.com/x/mpVw
