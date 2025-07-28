@@ -135,6 +135,9 @@ class scoreboard;
         {golden_cout, golden_sum} = trans_gen.A - trans_gen.B;
       end
       
+      $display("Golden data: sum = %b, cout = %b", golden_sum, golden_cout);
+      $display("Actual output from DUT: sum = %b, cout = %b", trans_mon.sum, trans_mon.cout);
+      
       //Comparison
       if (golden_sum == trans_mon.sum && golden_cout == trans_mon.cout) begin
         $display("[SCB]: TESTCASE PASSED");
