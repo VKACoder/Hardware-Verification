@@ -27,6 +27,6 @@ module addsub (
     end
   endgenerate
   
-  assign cout = C[4];
+  assign cout = C[4] ^ Cin;
   
 endmodule  
