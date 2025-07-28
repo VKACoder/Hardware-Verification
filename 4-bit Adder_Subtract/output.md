@@ -8,4 +8,10 @@ Image 1
 
 Image 2
 
-From the above images, it can inferred that the verification is successful if Cin = 0, i.e., during addition. However when Cin = 1, all the testcases are unsuccessful, even though the obtained output from DUT is correct (Image 1, 4th testcase). Taking a guess that the generated of golden data is wrong, I tried displaying the golden data (golden_cout and golden_sum).
+From the above images, it can inferred that the verification is successful if Cin = 0, i.e., during addition. However when Cin = 1, all the testcases are unsuccessful, even though the obtained output from DUT is correct (Image 1, 4th testcase). To find cause of testcase failure, I added display statment to print the golden data and actual data received from DUT. Found that golden_cout is the inverted version of actual cout (trans_mon.cout) with the difference (golden_sum and trans_mon.sum) being the same.
+
+Cause:
+The DUT failed in sign extension, i.e., when A = 1000, B = 1111 and Cin = 1 (Subtraction), the difference and cout must be 1001 and 1 (all in binary system). However, the DUT produced 1001 as difference and 0 as cout, causing the corresponding testcase to fail.
+
+Fix:
+Invert cout when Cin = 1.
