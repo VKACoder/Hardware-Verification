@@ -8,4 +8,4 @@ Image 1
 
 Image 2
 
-From the above images, it can inferred that the verification is successful if Cin = 0, i.e., during addition. However when Cin = 1, all the testcases are unsuccessful, even though the obtained output from DUT is correct (Image 1, 4th testcase). Taking a guess that the generation of golden data is wrong, I tried displaying the golden data (golden_cout and golden_sum).
+From the above images, it can inferred that the verification is successful if Cin = 0, i.e., during addition. However when Cin = 1, all the testcases are unsuccessful, even though the obtained output from DUT is correct (Image 1, 4th testcase). Taking a guess that the generated of golden data is wrong, I tried displaying the golden data (golden_cout and golden_sum).
