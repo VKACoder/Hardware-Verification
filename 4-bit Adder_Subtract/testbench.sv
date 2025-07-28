@@ -49,6 +49,7 @@ class generator;
       assert (trans_gen.randomize()) else $error("[GEN]: Randomization failed!!");
       mbx_to_drv.put(trans_gen.copy());
       mbx_to_scb.put(trans_gen.copy());
+      $display("-------------------------------------------------------------------------");
       $display("[GEN]: A = %0d, B = %0d, Cin = %0b, Sum = %0d, Cout = %0b", trans_gen.A, trans_gen.B, trans_gen.Cin, trans_gen.sum, trans_gen.cout);
       //@(drv_next);
       @(scb_next);
@@ -141,6 +142,84 @@ class scoreboard;
       else begin
         $display("[SCB]: TESTCASE FAILED");
       end
+      $display("-------------------------------------------------------------------------");
+      ->scb_next;
     end
   endtask
 endclass
+
+class environment;
+  generator gen;
+  driver drv;
+  monitor mon;
+  scoreboard scb;
+  
+  event next;
+  
+  mailbox #(transaction) mbx_gd; 
+  mailbox #(transaction) mbx_ms;
+  mailbox #(transaction) mbx_gs;
+  
+  virtual addsub_if asif;
+  
+  function new(virtual addsub_if asif);
+    
+    mbx_gd = new();
+    mbx_ms = new();
+    mbx_gs = new();
+    
+    gen = new(mbx_gd, mbx_gs);
+    drv = new(mbx_gd);
+    mon = new(mbx_ms);
+    scb = new(mbx_gs, mbx_ms);
+    
+    this.asif = asif;
+    drv.asif = this.asif;
+    mon.asif = this.asif;
+    
+    gen.scb_next = next;
+    scb.scb_next = next;
+    //
+    
+  endfunction
+  
+  task test();
+    fork
+      gen.run();
+      drv.run();
+      mon.run();
+      scb.run();
+    join_any
+  endtask
+  
+  task post_run();
+    wait(gen.done.triggered);
+    $finish();
+  endtask
+  
+  task run();
+    test();
+    post_run();
+  endtask
+endclass
+
+module tb_top;
+  
+  addsub_if asif();
+  
+  environment env;
+  
+  addsub DUT(.A(asif.A), .B(asif.B), .Cin(asif.Cin), .sum(asif.sum), .cout(asif.cout));
+  
+  initial begin
+    env = new(asif);
+    env.gen.count = 10;
+    env.run();
+  end
+  
+  initial begin
+    $dumpfile("dump.vcd");
+    $dumpvars;
+  end
+  
+endmodule
