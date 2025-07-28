@@ -1,10 +1,10 @@
 OUTPUT obtained:
 
-<img width="944" height="1139" alt="Screenshot (18)" src="https://github.com/user-attachments/assets/54107684-380d-405f-8d85-498a0c3864f4" />
+<img width="921" height="1139" alt="Screenshot (18)" src="https://github.com/user-attachments/assets/54107684-380d-405f-8d85-498a0c3864f4" />
 
 Image 1
 
-<img width="944" height="1139" alt="Screenshot (19)" src="https://github.com/user-attachments/assets/03373a3c-7ca6-421e-8deb-6fe2e2b657c7" />
+<img width="921" height="1139" alt="Screenshot (19)" src="https://github.com/user-attachments/assets/03373a3c-7ca6-421e-8deb-6fe2e2b657c7" />
 
 Image 2
 
@@ -15,3 +15,13 @@ The DUT failed in sign extension, i.e., when A = 1000, B = 1111 and Cin = 1 (Sub
 
 Fix:
 Invert cout when Cin = 1.
+
+FINAL OUTPUT OF TESTBENCH:
+
+<img width="921" height="1139" alt="Screenshot (20)" src="https://github.com/user-attachments/assets/4f4770cf-d535-494f-a699-1f804b41fc50" />
+
+Image 3
+
+<img width="921" height="1139" alt="Screenshot (21)" src="https://github.com/user-attachments/assets/f62db05e-44c4-4c75-aa33-0704ea0214fe" />
+
+Image 4
