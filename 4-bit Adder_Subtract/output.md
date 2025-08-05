@@ -28,7 +28,7 @@ Image 4
 
 ##UPDATE
 
-Included covergroup to indicate the percent coverage of the simulutus (A, B) taking extreme values (0, 15). 
+Included covergroup to indicate the percent coverage of the stimulus (A, B) taking extreme values (0, 15). 
 
 
 
