@@ -30,6 +30,6 @@ Image 4
 
 Included covergroup to indicate the percent coverage of the stimulus (A, B) taking extreme values (0, 15). 
 
-
+<img width="562" height="797" alt="Screenshot from 2025-08-05 13-30-35" src="https://github.com/user-attachments/assets/add9f2bd-5735-482a-88e7-1d635f67b7d1" />
 
 Image 5
