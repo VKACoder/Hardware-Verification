@@ -25,3 +25,10 @@ Image 3
 <img width="921" height="1139" alt="Screenshot (21)" src="https://github.com/user-attachments/assets/f62db05e-44c4-4c75-aa33-0704ea0214fe" />
 
 Image 4
+
+###UPDATE
+Included covergroup to indicate the percent coverage of the simulutus (A, B) taking extreme values (0, 15). 
+
+
+
+Image 5
