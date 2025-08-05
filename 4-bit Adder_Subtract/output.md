@@ -30,8 +30,6 @@ Image 4
 
 Included covergroup to indicate the percent coverage of the simulutus (A, B) taking extreme values (0, 15). 
 
-x-special/nautilus-clipboard
-copy
-file:///home/vlsiuser/Downloads/Screenshot%20from%202025-08-05%2013-30-35.png
+
 
 Image 5
