@@ -109,6 +109,17 @@ class scoreboard;
   mailbox #(transaction) mbx_from_gen;
   mailbox #(transaction) mbx_from_mon;
   event scb_next;
+
+  bit [3:0] A, B;
+
+  covergroup MaxMin;
+    coverpoint A {
+      bins AMaxMin[] = {0,15};
+    }
+    coverpoint B {	
+      bins BMaxMin[] = {0,15};
+    }
+  endgroup
   
   bit [3:0] golden_sum;
   bit golden_cout;
@@ -118,6 +129,7 @@ class scoreboard;
     this.mbx_from_mon = mbx_from_mon;
     trans_gen = new();
     trans_mon = new();
+    this.MaxMin = new();
   endfunction
   
   task run();
@@ -145,6 +157,10 @@ class scoreboard;
       else begin
         $display("[SCB]: TESTCASE FAILED");
       end
+      A = trans_gen.A;
+      B = trans_gen.B;	
+      this.MaxMin.sample();
+      $display("Coverage percentage for min and max values: %0.2f%%", this.MaxMin.get_inst_coverage());
       $display("-------------------------------------------------------------------------");
       ->scb_next;
     end
@@ -182,7 +198,6 @@ class environment;
     
     gen.scb_next = next;
     scb.scb_next = next;
-    //
     
   endfunction
   
@@ -216,7 +231,7 @@ module tb_top;
   
   initial begin
     env = new(asif);
-    env.gen.count = 10;
+    env.gen.count = 20;
     env.run();
   end
   
