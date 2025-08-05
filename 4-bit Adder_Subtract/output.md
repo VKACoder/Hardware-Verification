@@ -26,7 +26,8 @@ Image 3
 
 Image 4
 
-###UPDATE
+##UPDATE
+
 Included covergroup to indicate the percent coverage of the simulutus (A, B) taking extreme values (0, 15). 
 
 
