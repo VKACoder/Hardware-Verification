@@ -33,3 +33,13 @@ Included covergroup to indicate the percent coverage of the stimulus (A, B) taki
 <img width="562" height="797" alt="Screenshot from 2025-08-05 13-30-35" src="https://github.com/user-attachments/assets/add9f2bd-5735-482a-88e7-1d635f67b7d1" />
 
 Image 5
+
+QuestaSIM outputs:
+
+<img width="1809" height="417" alt="Screenshot from 2025-08-06 11-11-20" src="https://github.com/user-attachments/assets/7849af51-0087-41a3-8497-7a86cb91795e" />
+
+Image 6
+
+<img width="813" height="206" alt="Screenshot from 2025-08-06 11-11-44" src="https://github.com/user-attachments/assets/06dec547-1365-4be7-92dc-9c72d0f06a7c" />
+
+Image 7
